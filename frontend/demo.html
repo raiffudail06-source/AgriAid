@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriAid — Crop Analyzer</title>
+    <link rel="stylesheet" href="demo.css" />
+    <script src="https://kit.fontawesome.com/a2d5df26a4.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="demo-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">AgriAid</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Analyzer Section -->
+    <section class="analyzer">
+        <h1 class="neon-text tubelight">🌿 Crop Analyzer</h1>
+        <p class="tagline">
+            Upload your crop image, share your concern through voice in any language — AgriAid will translate, analyze, and guide you.
+        </p>
+
+        <div class="card">
+            <h3>1️⃣ Upload Crop Image</h3>
+            <input type="file" id="fileInput" accept="image/*" />
+            <img id="preview" alt="Preview" />
+        </div>
+
+        <div class="card">
+            <h3>2️⃣ Voice Input</h3>
+            <button id="micBtn" class="mic-btn">🎤 Start Mic</button>
+            <div id="transcript" class="transcript" placeholder="Speak or type your concern..."></div>
+        </div>
+
+        <div class="card">
+            <h3>3️⃣ Get Results</h3>
+            <button id="analyzeBtn" class="action-btn">🔍 Analyze Crop</button>
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <h3><i class="fa-solid fa-microscope"></i> Analysis Result</h3>
+            <p><strong>Disease:</strong> <span id="diseaseName">–</span></p>
+            <p><strong>Confidence:</strong> <span id="confidence">–</span>%</p>
+            <div class="progress">
+                <div id="progress"></div>
+            </div>
+            <p><strong>Solution:</strong></p>
+            <p id="solution">–</p>
+        </div>
+
+        <div class="weather" id="weather">
+            <h3>🌤 Local Weather Dashboard</h3>
+            <p id="weatherInfo">Fetching location and weather details...</p>
+            <iframe id="map" width="100%" height="250" style="border-radius: 10px; margin-top: 10px;" loading="lazy" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer id="support">
+        <p>© 2025 AgriAid | AI for Sustainable Farming 🌱</p>
+    </footer>
+
+    <script src="demo.js"></script>
+
+    <!-- ✅ Add this Google Maps API script below -->
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?AIzaSyC3nTzaUumMJag1Nwgc_BdYzn71PIU0z-g&callback=initMap">
+    </script>
+</body>
+</html>

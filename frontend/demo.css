@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    background: #000;
+    color: #cfcfcf;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    padding-top: 90px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #00ff88;
+    z-index: 1000;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #00ff88;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px #00ff88;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+
+/* Analyzer Section */
+
+.analyzer {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.neon-text {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 30px #00ff88;
+    font-size: 2.5rem;
+}
+
+.tubelight {
+    animation: glow 6s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #00ff88, 0 0 25px #00ff88;
+    }
+    5% {
+        opacity: 0.6;
+    }
+    7% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+.tagline {
+    color: #bbb;
+    margin-top: 8px;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+
+/* Cards */
+
+.card,
+.result-box,
+.weather {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+}
+
+.card h3,
+.weather h3 {
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+#preview {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+.mic-btn,
+.action-btn {
+    margin-top: 10px;
+    padding: 10px 24px;
+    border: none;
+    background: #00ff88;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mic-btn:hover,
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+.mic-btn.recording {
+    background: red;
+    color: #fff;
+}
+
+.transcript {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 8px;
+    min-height: 60px;
+    color: #ccc;
+}
+
+
+/* Loading Animation (AI Analyzing...) */
+
+.loading-bar {
+    width: 0%;
+    height: 6px;
+    background: linear-gradient(90deg, #00ff88, #2ecc71);
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 0 15px #00ff88;
+    transition: width 3s ease;
+    display: none;
+}
+
+
+/* Progress Bar */
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00ff88, #2ecc71);
+    transition: width 0.8s ease;
+}
+
+
+/* Weather Section */
+
+.weather {
+    text-align: center;
+}
+
+#weatherInfo {
+    color: #bbb;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #555;
+    border-top: 1px solid #00ff88;
+    margin-top: 50px;
+}
